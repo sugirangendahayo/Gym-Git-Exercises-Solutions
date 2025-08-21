@@ -74,3 +74,24 @@ git stash pop stash@{0}  # restore team.html
 ```bash
 git reset --hard HEAD
 ```
+
+## BUNDLE 2
+## Exercise 1
+# Create a new branch named 'ft/bundle-2-v2'
+git checkout -b ft/bundle-2-v2
+
+# Create a new page named 'services.html'
+touch services.html
+
+# Stage the new file for commit
+git add services.html
+
+# Check the status to confirm the file is staged
+git status
+
+# Commit the changes with a descriptive message
+git commit -m "Add services.html page for Bundle 2"
+
+# Push the new branch to the remote repository and set upstream
+git push -u origin ft/bundle-2-v2
+
