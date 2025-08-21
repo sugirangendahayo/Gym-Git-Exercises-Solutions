@@ -2,7 +2,7 @@
 
 ## BUNDLE 1
 
-## Exercise 1 - Gym Git Exercises
+## BUNDLE 1 - Exercise 1 
 
 ### Initialize repo
 
@@ -38,7 +38,7 @@ git checkout dev
 git branch -d test
 ```
 
-## Exercise 2
+## BUNDLE 1 - Exercise 2
 
 ### Create and modify home.html, then stash changes:
 
@@ -99,33 +99,45 @@ git reset --hard HEAD
 
 ## BUNDLE 2
 
-## Exercise 1
+## BUNDLE 2 - Exercise 1
 
-# Create a new branch named 'ft/bundle-2-v2'
+### Create a new branch named 'ft/bundle-2-v2'
 
+```bash
 git checkout -b ft/bundle-2-v2
+```
 
-# Create a new page named 'services.html'
+### Create a new page named 'services.html'
 
+```bash
 touch services.html
+```
 
-# Stage the new file for commit
+### Stage the new file for commit
 
+```bash
 git add services.html
+```
 
-# Check the status to confirm the file is staged
+### Check the status to confirm the file is staged
 
+```bash
 git status
+```
 
-# Commit the changes with a descriptive message
+### Commit the changes with a descriptive message
 
+```bash
 git commit -m "Add services.html page for Bundle 2"
+```
 
-# Push the new branch to the remote repository and set upstream
+### Push the new branch to the remote repository and set upstream
 
+```bash
 git push -u origin ft/bundle-2-v2
+```
 
-## Exercise 2
+## BUNDLE 2 - Exercise 2
 
 # Checkout main and pull the latest changes
 
@@ -141,17 +153,20 @@ git checkout -b ft/service-redesign
 ### For example, open services.html in your editor and make changes
 
 ### Stage and commit the redesign changes
+
 ```bash
 git add services.html
 git commit -m "Redesign services.html page for Exercise 2"
 ```
 
 ### Push the new branch to the remote repository and set upstream
+
 ```bash
 git push -u origin ft/service-redesign
 ```
 
 ### Switch back to main to make conflicting changes
+
 ```bash
 git checkout main
 ```
@@ -167,11 +182,13 @@ git push origin main
 ```
 
 ### Switch back to the feature branch to merge main
+
 ```bash
 git checkout ft/service-redesign
 ```
 
 ### Merge main into your feature branch to handle conflicts
+
 ```bash
 git merge main
 ```
@@ -179,12 +196,14 @@ git merge main
 ### If conflicts appear, open services.html and resolve them manually
 
 ### After resolving conflicts, stage and commit
+
 ```bash
 git add services.html
 git commit -m "Resolve merge conflicts with main in services.html"
 ```
 
 ### Push the updated feature branch
+
 ```bash
 git push
 ```
