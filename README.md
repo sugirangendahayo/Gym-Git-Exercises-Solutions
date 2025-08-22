@@ -353,3 +353,138 @@ git push origin ft/team-page
 ```
 
 ### Note: Create a Pull Request for the revert on ft/team-page on GitHub manually
+
+## BUNDLE 4 - Exercise 1: Push to Two Remotes
+
+### Checkout main branch
+
+```bash
+git checkout main
+```
+
+### Pull latest changes from origin
+
+```bash
+git pull origin main
+```
+
+### Add new GitHub repo as second remote named git-copy
+
+```bash
+git remote add git-copy https://github.com/sugirangendahayo/gym-git-exercises-copy.git
+
+```
+
+### Update home.html with new changes
+
+echo "<p>Updated home page content</p>" >> home.html
+
+### Stage the new changes
+
+```bash
+git add home.html
+```
+
+### Commit the changes with a descriptive message
+
+```bash
+git commit -m "Update home.html with new content"
+```
+
+### Push changes to origin remote
+
+```bash
+git push origin main
+```
+
+### Push changes to git-copy remote
+
+```bash
+git push git-copy main
+```
+
+## BUNDLE 4 - Exercise 2: Footer and Squashing Commits
+
+### Checkout a new branch named 'ft/footer'
+
+```bash
+git checkout -b ft/footer
+```
+
+### Add changes to footer in a file (for example in index.html)
+
+```bash
+echo "<footer>First footer update</footer>" >> index.html
+```
+
+### Stage the new changes
+
+```bash
+git add index.html
+```
+
+### Commit the changes with a descriptive message
+
+```bash
+git commit -m "Add initial footer content to index.html"
+```
+
+### Add more changes to footer in the same file
+
+```bash
+echo "<footer>Updated footer with additional content</footer>" >> index.html
+```
+
+### Stage the additional changes
+
+```bash
+git add index.html
+```
+
+### Commit the additional changes with a descriptive message
+
+```bash
+git commit -m "Update footer content in index.html"
+```
+
+### Push the new branch to the remote repository
+
+```bash
+git push -u origin ft/footer
+```
+
+### Checkout main branch
+
+```bash
+git checkout main
+```
+
+### Create a new branch named 'ft/squashing'
+
+```bash
+git checkout -b ft/squashing
+```
+
+### Squash merge changes from ft/footer branch
+
+```bash
+git merge --squash ft/footer
+```
+
+### Stage the squashed changes
+
+```bash
+git add .
+```
+
+### Commit the squashed changes with a new message
+
+```bash
+git commit -m "footer changes squashing"
+```
+
+### Push the new branch to the remote repository
+
+```bash
+git push -u origin ft/squashing
+```
