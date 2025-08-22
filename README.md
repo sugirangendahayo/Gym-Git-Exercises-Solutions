@@ -2,7 +2,7 @@
 
 ## BUNDLE 1
 
-## BUNDLE 1 - Exercise 1 
+## BUNDLE 1 - Exercise 1
 
 ### Initialize repo
 
@@ -209,3 +209,147 @@ git push
 ```
 
 ### Now the PR can be merged into main with all changes
+
+## BUNDLE 3
+
+## BUNDLE 3 - Exercise 1
+
+### Ensure we're on the main branch and up-to-date
+
+```bash
+git checkout main
+git pull origin main
+```
+
+### Create and checkout ft/team-page branch
+
+```bash
+git checkout -b ft/team-page
+```
+
+### Create team.html with sample content
+
+```bash
+touch team.html
+```
+
+### Stage and commit changes
+
+```bash
+git add team.html
+git commit -m "Add team.html with initial content"
+```
+
+### Push ft/team-page to GitHub
+
+```bash
+git push origin ft/team-page
+```
+
+### Note: Create a Pull Request for ft/team-page on GitHub manually
+
+### Checkout main branch
+
+```bash
+git checkout main
+```
+
+### Create and checkout ft/contact-page branch
+
+```bash
+git checkout -b ft/contact-page
+```
+
+### Go back to ft/team-page to get the last commit hash
+
+```bash
+git checkout ft/team-page
+```
+
+### View git log to copy the last commit hash (for cherry-pick later)
+
+```bash
+git log -1 --pretty=%H
+```
+
+### Output example: 6d842d406... (copy this hash manually for later use)
+
+### Go back to ft/contact-page
+
+```bash
+git checkout ft/contact-page
+```
+
+### Cherry-pick the last commit from ft/team-page (replace abc123 with actual hash)
+
+```bash
+git cherry-pick abc123
+```
+
+### Create contact.html with sample content
+
+```bash
+touch contact.html
+```
+
+### Stage and commit new contact page changes
+
+```bash
+git add contact.html
+git commit -m "Add contact.html with initial content"
+```
+
+### Push ft/contact-page to GitHub
+
+```bash
+git push origin ft/contact-page
+```
+
+### Note: Create a Pull Request for ft/contact-page on GitHub manually
+
+### Create and checkout ft/faq-page branch from ft/contact-page
+
+```bash
+git checkout -b ft/faq-page
+```
+
+### Create faq.html with sample content
+
+```bash
+touch faq.html
+```
+
+### Stage and commit faq.html changes
+
+```bash
+git add faq.html
+git commit -m "Add faq.html with initial content"
+```
+
+### Push ft/faq-page to GitHub
+
+```bash
+git push origin ft/faq-page
+```
+
+### Note: Create a Pull Request for ft/faq-page on GitHub manually
+
+### Go back to ft/team-page for revert
+
+```bash
+git checkout ft/team-page
+```
+
+### Revert the last commit on ft/team-page (replace abc123 with the same hash used earlier)
+
+```bash
+git revert 6d842d406ca55138954be759eb4defdb2c8b5521
+```
+
+### Push the revert commit to GitHub
+
+```bash
+git push origin ft/team-page
+```
+
+### Note: Create a Pull Request for the revert on ft/team-page on GitHub manually
