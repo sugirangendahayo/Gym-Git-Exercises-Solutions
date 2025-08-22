@@ -488,3 +488,83 @@ git commit -m "footer changes squashing"
 ```bash
 git push -u origin ft/squashing
 ```
+
+## BUNDLE 5
+
+## BUNDLE 5 - Exercise 1: Enable GitHub Pages
+
+### Ensure on main branch
+
+```bash
+git checkout main
+```
+
+### Pull latest changes from origin
+
+```bash
+git pull origin main
+```
+
+### Note: Enable GitHub Pages manually in the GitHub UI
+
+### Go to gym-git-exercises repository on GitHub
+
+### Verify the GitHub Pages site is live
+
+### Visit https://sugirangendahayo.github.io/gym-git-exercises
+
+### Check if the site is publicly visible by opening the link in an incognito browser
+
+## BUNDLE 5 - Exercise 2: Fork and Update Git Cafe Exercise
+
+### Fork the repository manually on GitHub
+
+### Go to https://github.com/TheGymRwanda/git-cafe-exercise
+
+### Click "Fork", tick "Copy the main branch only", and create fork
+
+### Clone the forked repository to a new folder
+
+```bash
+git clone https://github.com/<your-username>/git-cafe-exercise.git ~/desktop/gym-apps/git-cafe-exercise
+```
+
+### Navigate to the cloned repository
+
+cd ~/desktop/gym-apps/git-cafe-exercise
+
+### Ensure on main branch
+
+```bash
+git checkout main
+```
+
+### Edit index.html to change the text
+
+### Stage the changes
+
+```bash
+git add index.html
+```
+
+### Commit the changes with a descriptive message
+
+```bash
+git commit -m "Update welcome text in index.html"
+```
+
+### Push the changes to your forked repository
+
+```bash
+git push origin main
+```
+
+### Create a Pull Request to the original repository manually
+
+### Go to the forked repository on GitHub
+
+### Click "Contribute" and "Open pull request"
+
+### Add description
+
+### Create PR to TheGymRwanda/git-cafe-exercise
